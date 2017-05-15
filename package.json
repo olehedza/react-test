@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --inline --hot",
-    "dev": "SET NODE_ENV=development && npm run start",
-    "prod": "SET NODE_ENV=production && webpack",
+    "dev": "NODE_ENV=development && npm run start",
+    "prod": "NODE_ENV=production && webpack",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rainman161/test.git"
+    "url": "git+https://github.com/olehedza/react-test.git"
   },
   "keywords": [
     "test",
@@ -21,9 +21,9 @@
   "author": "Vladilen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rainman161/test/issues"
+    "url": "https://github.com/olehedza/react-test/issues"
   },
-  "homepage": "https://github.com/rainman161/test#readme",
+  "homepage": "https://github.com/olehedza/react-test#readme",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
@@ -44,7 +44,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   }
 }

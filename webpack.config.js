@@ -12,14 +12,14 @@ module.exports = {
     ],
     output: {
         publicPath: 'http://localhost:3000/',
-        path: __dirname + '/public',
+        path: path.resolve(__dirname, '/public'),
         filename: 'bundle.js'
     },
-    watch: NODE_ENV == 'development',
+    watch: NODE_ENV === 'development',
     watchOptions: {
         aggregateTimeout: 100
     },
-    devtool: NODE_ENV == 'development' ? 'cheap-inline-module-source-map' : null,
+    devtool: NODE_ENV === 'development' ? 'cheap-inline-module-source-map' : null,
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin('bundle.css'),
@@ -88,7 +88,7 @@ module.exports = {
 };
 
 
-if (NODE_ENV == 'production') {
+if (NODE_ENV === 'production') {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
